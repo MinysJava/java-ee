@@ -13,7 +13,8 @@
 
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>
-    <url-pattern></url-pattern>
+    <url-pattern>*.hhh</url-pattern>
   </servlet-mapping>
+  
 
 </web-app>

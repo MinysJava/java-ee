@@ -13,6 +13,8 @@ public class FirstHttpServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html");
+
         resp.getWriter().println("<h1>Hello from FirstHttpServlet</h1>");
         resp.getWriter().println("<h2>URL parametrs:</h2>");
         for (Map.Entry<String, String[]> param : req.getParameterMap().entrySet()){
@@ -25,5 +27,6 @@ public class FirstHttpServlet extends HttpServlet {
         resp.getWriter().printf("<p>Query string %s</p>", req.getQueryString());
         resp.getWriter().printf("<p>Path info %s</p>", req.getPathInfo());
 
+        resp.setStatus(HttpServletResponse.SC_OK);
     }
 }
