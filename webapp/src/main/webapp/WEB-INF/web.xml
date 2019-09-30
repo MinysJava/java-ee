@@ -5,4 +5,23 @@
          version="4.0">
 
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>ru.gb.servlet.FirstServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>*.hhh</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404</location>
+  </error-page>
+  <error-page>
+    <error-code>403</error-code>
+    <location>/error403</location>
+  </error-page>
+
 </web-app>
